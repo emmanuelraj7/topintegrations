@@ -10,7 +10,7 @@ import Nav from '@material-tailwind/react/Nav';
 import NavLink from '@material-tailwind/react/NavLink';
 import Dropdown from '@material-tailwind/react/Dropdown';
 import DropdownItem from '@material-tailwind/react/DropdownItem';
-import Icon from '@material-tailwind/react/Icon';
+// import Icon from '@material-tailwind/react/Icon';
 import Button from '@material-tailwind/react/Button';
 
 export default function DefaultNavbar() {
@@ -25,7 +25,7 @@ export default function DefaultNavbar() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <NavbarBrand>Material Tailwind</NavbarBrand>
+                        <NavbarBrand>Top Integrations</NavbarBrand>
                     </a>
                     <NavbarToggler
                         onClick={() => setOpenNavbar(!openNavbar)}
@@ -37,22 +37,34 @@ export default function DefaultNavbar() {
                     <Nav>
                         <div className="flex flex-col z-50 lg:flex-row lg:items-center">
                             <NavLink
-                                href="https://material-tailwind.com/documentation/quick-start?ref=mtk"
+                                // href="https://material-tailwind.com/documentation/quick-start?ref=mtk"
                                 target="_blank"
                                 rel="noreferrer"
                                 ripple="light"
+                                //hi
                             >
-                                <Icon name="description" size="2xl" />
-                                &nbsp;Docs
+                                <Link to="/about">
+                                {/* <Icon name="description" size="2xl" /> */}
+                                &nbsp;About </Link>
                             </NavLink>
                             <NavLink
-                                href="https://material-tailwind.com/components?ref=mtk"
+                                // href="https://material-tailwind.com/components?ref=mtk"
+                                
                                 target="_blank"
                                 rel="noreferrer"
                                 ripple="light"
                             >
-                                <Icon name="apps" size="2xl" />
-                                &nbsp;Components
+                                {/* <Icon name="apps" size="2xl" /> */}
+                                &nbsp;career
+                            </NavLink>
+                            <NavLink
+                                // href="https://material-tailwind.com/components?ref=mtk"
+                                target="_blank"
+                                rel="noreferrer"
+                                ripple="light"
+                            >
+                                {/* <Icon name="apps" size="2xl" /> */}
+                                &nbsp;contact
                             </NavLink>
                             <div className="text-white">
                                 <Dropdown
@@ -61,13 +73,13 @@ export default function DefaultNavbar() {
                                     buttonType="link"
                                     buttonText={
                                         <div className="py-2.5 font-medium flex items-center">
-                                            <Icon
+                                            {/* <Icon
                                                 name="view_carousel"
                                                 size="2xl"
                                                 color="white"
-                                            />
+                                            /> */}
                                             <span className="ml-2">
-                                                Templates
+                                                Services
                                             </span>
                                         </div>
                                     }
@@ -95,40 +107,6 @@ export default function DefaultNavbar() {
                                     </Link>
                                 </Dropdown>
                             </div>
-                            <NavLink
-                                href="https://github.com/creativetimofficial/material-tailwind?ref=mtk"
-                                target="_blank"
-                                rel="noreferrer"
-                                ripple="light"
-                            >
-                                <Icon
-                                    family="font-awesome"
-                                    name="fab fa-github"
-                                    size="xl"
-                                />
-                                &nbsp;Github
-                            </NavLink>
-                            <NavLink
-                                href="https://github.com/creativetimofficial/material-tailwind/issues?ref=mtk"
-                                target="_blank"
-                                rel="noreferrer"
-                                ripple="light"
-                            >
-                                Issues
-                            </NavLink>
-                            <a
-                                href="https://www.creative-tim.com/product/material-tailwind-kit-react"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <Button
-                                    color="transparent"
-                                    className="bg-white text-black ml-4"
-                                    ripple="dark"
-                                >
-                                    Free Download
-                                </Button>
-                            </a>
                         </div>
                     </Nav>
                 </NavbarCollapse>
